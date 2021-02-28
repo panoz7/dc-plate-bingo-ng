@@ -1,0 +1,5 @@
+<div id='platebuttons'>
+<div *ngFor="let letterData of plateData | async">
+  <button *ngFor="let plateData of letterData" type='button' [class.active]="plateData.active" (click)="onPlateClick(plateData)">{{plateData.plate}}</button>
+</div>
+</div>

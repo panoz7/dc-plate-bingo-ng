@@ -1,0 +1,21 @@
+#platebuttons {
+    display: flex;
+}
+
+#platebuttons div {
+    display: flex;
+    flex-direction: column;
+}
+
+#platebuttons button {
+    border: 0px solid black;
+    background-color: #ccc;
+    padding: 8px;
+    margin: 2px;
+    font-size: 14px;
+}
+
+#platebuttons button.active {
+    background-color: #333;
+    color: white;
+}
