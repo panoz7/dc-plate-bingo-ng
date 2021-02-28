@@ -43,7 +43,7 @@ export class PlateDataService {
 
   formatPlateData(plates: string[]): Plate[][] {
     const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-    const maxLetterIndex = letters.indexOf(plates[plates.length - 1][0]) + 2;
+    const maxLetterIndex = plates.length ? letters.indexOf(plates[plates.length - 1][0]) + 2 : 7;
 
     let split = letters.slice(0, maxLetterIndex)
       .map(letter1 => letters.map(letter2 => {return {'plate': `${letter1}${letter2}`, 'active': plates.includes(`${letter1}${letter2}`)}}));
